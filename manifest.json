@@ -2,9 +2,16 @@
   "manifest_version": 3,
   "name": "Enchrome",
   "version": "1.0.0",
+  "description": "Stores and autoapplies password encryptions to add security to any password.",
+  "author": "Simon Townley-Smith",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Enchrome"
+  },
+  "permissions": ["storage"],
   "content_scripts": [
     {
-      "matches": ["*"],
+      "matches": ["*://*/*"],
       "js": ["enchrome.js"]
     }
   ]
